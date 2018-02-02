@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 * Demonstrates array declarions by storing single variables into an array.
 *
@@ -114,7 +113,6 @@ function moreArrayMethods(priorities){
 }
 
 console.log(moreArrayMethods(["Zero Play", "Sleeping", "HW", "Work", "School", "Planning For Future", "Not Going to Class"]));
-=======
 /*
 * Demonstrates array declarions by storing single variables into an array.
 *
@@ -196,7 +194,10 @@ function arrayMethodToLoop(numbers){
 	//Print the parameter that is being passed through the function
 	console.log(numbers);
 	//Use the forEach() method to add 5 to each value in the passed array
-	numbers.forEach(arrayMethodToLoop())
+	numbers.forEach(function(curr, index){
+		numbers.push(curr + 5);
+		numbers.sort();
+	})
 	//Return the changed array
 	return (numbers);
 }
@@ -211,18 +212,19 @@ console.log(arrayMethodToLoop([5 + 1, 3]));
 */
 function moreArrayMethods(priorities){
 	//Print the parameter that is being passed through the function
-
+	console.log(priorities);
 	//Use the method sort() to sort your priorities
-
+	priorities.sort();
 	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
-
+	var replace = priorities.indexOf("Not Going to Class");
+		replace = "Going to Class";
 	//Use the method pop() to remove the item at the end of the array
-
+	priorities.pop();
 	//Use the method push() to add a priority that is important to the success of this class and don't forget to sort() them afterwards!
-
+	priorities.push("Prioritize time for classes and STUDY!");
+	priorities.sort();
 	//Return the changed array
-	return;
+	return (priorities);
 }
 
 console.log(moreArrayMethods(["Zero Play", "Sleeping", "HW", "Work", "School", "Planning For Future", "Not Going to Class"]));
->>>>>>> 1b21327a4dbebcee090203b278c543e78637eaf6
